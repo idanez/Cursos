@@ -1,5 +1,5 @@
 function rand([min = 0, max = 1000]) {
-    if(min > max) [min, max] = [max, min] //<- inverte as variaveis dentro do array
+    if (min > max) [min, max] = [max, min] //<- inverte as variaveis dentro do array
     const valor = Math.random() * (max - min) + min
     return Math.floor(valor) //<- Arredonda para baixo
 }
