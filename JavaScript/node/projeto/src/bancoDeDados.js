@@ -19,6 +19,12 @@ function getProdutos() {
     return Object.values(produtos)
 }
 
+function excluirProduto(id) {
+    const produto = produtos[id]
+    delete produtos[id]
+    return produto
+}
+
 //As funcoes aqui dentros estao visiveis apenas nesse modulo do node, o codigo abaixo
 //faz com que o que foi especificado fique visivel para todo o sistema
-module.exports = {salvarProduto, getProduto, getProdutos}
+module.exports = {salvarProduto, getProduto, getProdutos, excluirProduto}
