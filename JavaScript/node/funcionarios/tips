@@ -1,0 +1,5 @@
+para instalar o nodemon:
+npm i -g nodemon
+npm i -> recria a pasta node_modules
+Os comandos start e test do package.json já existem no node e podem ser rodados com npm start ou npm test
+Ao adicionar outro script, deve ser rodado com: npm run <nome_do_script>

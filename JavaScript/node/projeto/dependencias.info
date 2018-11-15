@@ -1,0 +1,2 @@
+npm i --save express
+npm i --save body-parser@1.18.2 -E //-E significa para instalar a versao especifica informada
