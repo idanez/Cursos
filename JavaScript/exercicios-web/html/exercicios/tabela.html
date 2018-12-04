@@ -1,0 +1,57 @@
+<table>
+    <caption>Produtos</caption>
+    <thead>
+        <!--Area do cabeçalho-->
+        <tr>
+            <th>Produto</th>
+            <th>Preço</th>
+            <th>Quantidade</th>
+            <th>Total</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <!--td = table data-->
+            <td>iPad</td>
+            <td>1000</td>
+            <td>5</td>
+            <td>2000</td>
+        </tr>
+        <tr>
+            <td>Samsung S9</td>
+            <td>2100</td>
+            <td>1</td>
+            <td>2100</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="3" rowspan="2">Total</td>
+            <td>4200</td>
+        </tr>
+        <tr>
+            <td>teste</td>
+        </tr>
+    </tfoot>
+</table>
+
+<style>
+    table {
+        border-collapse: collapse; /*Remove as linhas da tabela, se tiver borda, mostra apenas uma linha fina*/
+    }
+    th, td {
+        padding: 10px; /*aumenta os espaços de todos os ths e tds*/
+    }
+    thead tr {
+        border-bottom: solid 3px #444; /*Adiciona uma linha baixo da tr do thead com o tamanho e cor informada*/
+    }
+
+    tbody tr:hover {
+        background-color: #dedede; /*apenas para os tr's do tbody, muda a cor de fundo da linha quando o mouse passar em cima*/
+    }
+    tfoot { /*muda a cor de fundo, cor d texto e fonte do que estiver no tfoot*/
+        background-color: #444;
+        color: #fff;
+        font-weight: bold;
+    }
+</style>
