@@ -1,6 +1,7 @@
 <h1>Formulário</h1>
 
 <form action="http://localhost:3003/usuarios" method="POST">
+    <input type="hidden" name="id">
     <input type="text" name="name"> <!--name = nome do input o qual chegara como chave no backend-->
     <input type="password" name="senha">
     <textarea name="bio" cols="30" rows="10"></textarea>
@@ -30,7 +31,11 @@
 
     </select>
 
+    <!--
+    <button formaction="http://localhost:3003/usuarios" formmethod="POST">Incluir</button>
+    -->
     <button>Incluir</button>
+    <button formaction="http://localhost:3003/usuarios/3" formmethod="POST">Alterar</button>
 </form>
 
 <style>
