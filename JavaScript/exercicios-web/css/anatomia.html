@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Anatomia CSS</title>
+    <style>
+        /* ...Os exercicios serao feitos no proprio html, mas de forma geral é melhor ter arquivos separados para o css */
+        .seletor {
+            color: #fff;
+            font-size: 30px;
+            text-align: center;
+            /*multiplos valores*/
+            border: solid 5px navy; /*shorthand property - Aplicar 3 propriedades de uma vez só*/
+            font-family: Helvetica, sans-serif; /*Tenta aplicar a primeira fonte, se nao achar, a segunda*/
+            /*funções*/
+            width: calc(100% - 100px);
+            background-color: rgb(34, 153, 189);
+        }
+
+        /*Usando uma pseudo-classe (com 1x dois pontos)*/
+        .seletor:hover {
+            background-color: orangered;
+        }
+
+        /*Usando um pseudo-elemento (com 2x dois pontos pontos)*/
+        .seletor::first-letter {
+            font-size: 60px;
+            font-weight: bold;
+        }
+
+        /*padrao de nomenclatura?*/
+        /*padrao dash-case ou camelcase? Tanto faz, mas manter uma consistencia*/
+        /*nome da classe é case sensitive, mas o elemento html nao (div, a, h1 por exemplo)*/
+
+    </style>
+</head>
+
+<body>
+    <div class="seletor">Conteúdo</div>
+</body>
+
+</html>
