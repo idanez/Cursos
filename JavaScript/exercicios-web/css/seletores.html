@@ -6,7 +6,35 @@
     <title>CSS Selectors</title>
     <link rel="stylesheet" href="css/tag.css">
     <style>
-        /* ... */
+        /* Seletor universal 
+        * { 
+            color: #ff0;
+            background-color: #f77;
+        }
+        .tag => pega os componentes que possuem a classe tag
+        #aninhado => pega o componente com o id "aninhado"
+        #aninhado > div => Dentro do id "aninhado" pega o elemento que estiver diretamente dentro (filho direto)
+        #aninhado section => dentro do componente com id "aninhado" pega o componente seletor
+        p + ul => vai na tag p e pega o ul adjacente
+        p + ol => Como nao sao adjacentes, isso nao funciona
+        p ~ ol => Pega os elementos ol que estiverem em qualquer lugar dentro do "p"
+        [feira] => pega todos os elementos que tem como propriedade: "feira"
+        [feira=casa] => seleciona apenas quando o atributo "feira" tiver o valor "casa"
+        [feira~=escritorio] => seleciona elementos que possuem o valor escritorio mesmo que contenham espaço
+        [feira*=sa] => seleciona elementos feira que possuem a string "sa"
+        span:nth-child(1) => Pega o primeiro filho de alguem que é do tipo span
+        section > :nth-child(odd) => dentro de uma section me de todos os filhos impares
+        section > :nth-child(even) => dentro de uma section me de todos os filhos pares
+        section > :nth-child(1) => dentro de uma section pega o primeiro filho adjacente
+        section > :nth-child(odd), ul => aplica tanto para os primeiro elementos impares de section quanto para elementos ul
+        section > span:nth-of-type(2) => pega o segundo elemento dentro da section que é um span
+
+        Dica, usar sempre o caminho mais simples para selecionar um elemento.
+        */
+        [feira] { 
+            color: #ff0;
+            background-color: #f77;
+        }
     </style>
 </head>
 
@@ -29,7 +57,7 @@
             </ol>
             <div id='aninhado' class='tag'>
                 <div class="tag">
-                    <section class='tag'>
+                    <section class='tag nolabel'>
                         <span class='tag'>1</span>
                         <p class='tag'>2</p>
                         <span class='tag'>3</span>
