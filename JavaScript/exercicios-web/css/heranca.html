@@ -4,8 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <title>Herança</title>
+    <link href="https://fonts.googleapis.com/css?family=ZCOOL+KuaiLe" rel="stylesheet">
     <style>
-        /* ... */
+        body {
+            /*font-family: monospace;*/
+            font-family: 'ZCOOL KuaiLe', cursive;
+            font-size: 40px;
+            /*shorthand property, ou seja, em uma unica propriedade, voce seta 3 informações:
+            estilo, espessura e cor*/
+            border: solid 3px red; 
+            /*Padding direto permite aplicar para os 4 cantos: 1 = top, 2 = right, 3 = bottom, 4 = left
+            1 - Se tiver apenas um valor aplica o mesmo em todos os 4
+            2 - Dois valores aplica no eixo horizontal e vertical
+            3 - Quatro valores aplica nos cantos informados acima*/
+            padding: 50px;
+            /*O margin fuciona da mesma forma que informado no padding acima*/
+            margin: 10px 100px 150px 200px;
+        }
+
+        div {
+            border: inherit;
+            padding: inherit;
+        }
     </style>
 </head>
 
