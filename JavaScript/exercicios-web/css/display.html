@@ -5,7 +5,31 @@
     <meta charset="UTF-8">
     <title>Display</title>
     <style>
-        /* ... */
+        body {
+            font-size: 40px;
+            color: #fff;
+            background-color: coral;
+        }
+        ul {
+            padding: 0;
+        }
+        div {background-color: seagreen}
+        span {background-color: dodgerblue}
+        li {background-color: purple}
+
+        div, span, li {
+            /*width: 50%;*/
+            width: 200px;
+            height: 80px;
+            padding-top: 30px;
+            text-align: center;
+            /*Cada item ocupa uma linha, o span por exemplo passa a entender o widht, height e etc*/
+            /*display: block;*;/
+            /*coloca os elementos na mesma linha. Nao da pra aumentar largura e altura. Mas o padding considera, tanto que o editor marca um warning nas propriedades acima*/
+            /*display: inline;*/
+            /*Na mesa linha mas leva em consideraçao a altura e largura*/
+            display: inline-block;
+        }
     </style>
 </head>
 

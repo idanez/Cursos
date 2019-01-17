@@ -4,8 +4,26 @@
     <meta charset="UTF-8">
     <title>Tamanho Box</title>
     <style>
+        * {
+            /*Seletor universal, faz com que propriedades propaga as propriedades daqui
+            para todos os elementos, meesmo as propriedades que nao seriam transmitidas
+            via herança.
+            */
+            box-sizing: border-box;
+        }
+
         body {
             font-size: 45px;
+            margin:0;
+        }
+        div {
+            background-color: deepskyblue;
+            width: 100%;
+            height: 300px;
+            padding: 100px;
+            border: solid 20px;
+            /*O border box faz considere da borda pra dentro e nao extraple as definições da pagina. Para testar, comentar essa propriedade e o padding*/
+           /* box-sizing: border-box;*/
         }
     </style>
 </head>
