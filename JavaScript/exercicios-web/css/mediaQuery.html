@@ -10,7 +10,25 @@
             padding: 20px;
             background-color: coral;
             border: solid 5px;
-            display: none;
+            display: none; /*esconde o componente*/
+        }
+
+        @media (max-width: 600px) {
+            /*Só vai agir quando a largura for 600px*/
+            .muito-pequeno {display: block; }
+        }
+
+        /*
+        O media query abaixo funciona como "OU"
+        Mostra se for maior que 100px OU a orientação é landscape
+        A virgula atua como OU
+        */
+        @media(max-width: 1000px), (orientation: portrait) {
+            .pequeno-retrato {display: block;}
+        }
+
+        @media (min-width: 500px) and (max-width: 1000px) {
+            .intervalo {display: block;}
         }
     </style>
 </head>

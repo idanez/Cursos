@@ -6,7 +6,50 @@
     <title>Flexbox #02</title>
     <link rel="stylesheet" href="css/tag.css">
     <style>
-        /* ... */
+
+        .flex-container div {
+            box-sizing: border-box;
+        }
+
+        .flex-container {
+            display: flex;
+            height: 300px;
+            width: 600px;
+        }
+
+        .flex-container div:nth-child(3) {
+            background-color: indianred;
+            order: 1; /*Nao é o indice, mas o peso da ordem, os elementos que poossuem uma ordem maior sao exibidos por ultimo*/
+            order: 0;
+            order: -1;
+            align-self: center; /*o padrao é stretch, aqui mudou para center*/
+            align-self: flex-end;
+            align-self: flex-start;
+            align-self: stretch;
+        }
+
+        .flex-container div {
+            width: 100px;
+            flex-grow: 0;
+            flex-grow: 1;
+        }
+
+        .flex-container div:nth-child(1) {
+            /*pega o primeiro elemento como foi definido nas divs
+            e nao pela posição corrente, caso tenha sido alterada
+            anteriormente*/
+            flex-grow: 2;
+        }
+
+        .flex-container {
+            width: 300px;
+            flex-shrink: 1;
+        }
+
+        .flex-container div:nth-child(1) {
+            flex-shrink: 5;
+        }
+
     </style>
 </head>
 
