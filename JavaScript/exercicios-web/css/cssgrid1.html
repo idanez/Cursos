@@ -25,6 +25,59 @@
 
         body {
             display: grid;
+            grid-template-columns: 50% 50%;
+            /*No exemplo abaixo, repete 4 vezes, colocando
+            3 colunas, cada uma ocupando 8.33% de espaço,
+            ou seja, no total serao 12 colunas. o que é o equivalente
+            a pegar 100% e dividir por 12*/
+            grid-template-columns: repeat(4, 8.33% 8.33% 8.33%);
+            grid-template-columns: repeat(4, 8.33%);
+            grid-template-columns: repeat(12, 8.33%);
+            /*O repeat vai criar 11 colunas de 100px e logo
+            em seguida adiciona mais uma de 100px*/
+            grid-template-columns: repeat(11, 100px) 100px;
+            /*minmax(100px, 300px) <- Outra funcao possivel de ser usada*/
+            /*1fr = 1 fragmento, pega o resto que estiver sobrando*/
+            grid-template-columns: 200px 20% 1fr;
+            grid-template-columns: 3fr 6fr 3fr;
+            grid-template-rows: 50% 25% 12.5% 12.5%;
+            /*Como no caso abaixo foi definido informação apenas
+            para 2 linhas, e as colunas foram 3 (Ou seja, para
+            acomodar os 12 elementos deveriam ser 4 linhas,
+            as outras linhas serao definidas de acorodo com o minimo
+            necessario para acomodar os elementos*/
+            grid-template-rows: 100px 1fr;
+            grid-template-rows: 100px auto;
+        }
+
+        .d8 {
+            grid-column-start: 2;
+            grid-column-end: 4;
+            grid-column-end: span 2;
+            grid-row-start: 3;
+            grid-row-end: 5;
+            grid-row-end: span 2;
+        }
+
+        .d10, .d11 {
+            /*podem se sobrepor*/
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 5;
+            /*Causa a sobreposicao*/
+            grid-row-end: span 1;
+        }
+
+        .d10 {
+            /*Profundidade dos elementos, 
+            quem vai ficar na frente de quem
+            Quanto maior o indice, mais preferencia ele tem
+            para sobrepor o item anterior, como nesse caso,
+            se o z-index do d10 for positivo (ou simplesmente 
+            maior que o do d11, ele vai ficar na frente do d11
+            Caso o z-index seja negativo (ou menor que o do d11) ele 
+            vai ficar atras*/
+            z-index: 10;
         }
 
     </style>
