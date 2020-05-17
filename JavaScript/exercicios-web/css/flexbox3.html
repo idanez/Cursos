@@ -7,6 +7,24 @@
     <link rel="stylesheet" href="css/tag.css">
     <style>
         /* ... */
+        .flex-container {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .flex-container div {
+            flex-basis: 50px; /*Forma oficial de definir o tamanho do elemento no main-axis*/
+            /*Caso o flex-direction seja column, sera usado o width para o tamanho
+            pois foi definido depois, caso seja row, de qualquer forma 
+            sera usado o flex-basis
+            */
+            width: 500px;
+        }
+        .flex-container div:nth-child(4) {
+            /*grow shrink basis (da aula flexbox2)*/
+            flex: 3 6 100px
+        }
+
     </style>
 </head>
 
