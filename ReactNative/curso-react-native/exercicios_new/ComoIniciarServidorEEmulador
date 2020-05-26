@@ -1,0 +1,20 @@
+;Para inciar um projeto react-native:
+;Definir uma variavel de ambiente ANDROID_HOME apontando para a pasta sdk da instalação do Android Studio
+;Colocar essa variavel no PATH do systema
+;Garantir que tem um java no PATH do sistema
+;Garantir que tem um NODE instalado e no PATH do sistema
+;Criar/Acessar uma pasta de projetos
+;Acessar a pasta e rodar os comandos abaixo
+npm i -g react-native-cli
+;Logo em seguida rodar o comando para inicializar o projeto react-native (Obs.: Sera criada uma pasta com o nome do projeto):
+react-native init <nome_do_projeto>
+;Entrar na pasta do projeto
+;Iniciar o emulador
+;Listar os emuladores existentes
+emulator -list-avds
+;Escolher um avd (Android Virtual Device) e iniciar com:
+emulator -avd Nexus_5X_API_29_x86
+;Iniciar o servidor (Abrir outro terminal)
+react-native run-android
+;O comando acima tb pode ser substituido por: "npm android" caso esse script exista no package.json
+
