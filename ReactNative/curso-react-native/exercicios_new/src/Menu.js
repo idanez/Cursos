@@ -8,6 +8,12 @@ import Simples from './componentes/Simples'
 import ParImpar from './componentes/ParImpar'
 import Inverter, { MegaSena } from './componentes/Multi'
 import Contador from './componentes/Contador'
+import Plataformas from './componentes/Plataformas';
+import ValidarProps from './componentes/ValidarProps';
+import Evento from './componentes/Evento';
+import Avo from './componentes/ComunicacaoDireta';
+import { TextoSincronizado } from './componentes/ComunicacaoIndireta'
+import ListaFlex from './componentes/ListaFlex'
 
 const Drawer = createDrawerNavigator();
 
@@ -53,21 +59,35 @@ export default function App() {
                 {
                     /**
                      * <Drawer.Screen name="Home" component={HomeScreen} />
-                        <Drawer.Screen name="Notifications" component={NotificationsScreen} />
+                       <Drawer.Screen name="Notifications" component={NotificationsScreen} />
                      */
                 }
+                 <Drawer.Screen name="Lista (Flex Box)">
+                    {() => <ListaFlex />}
+                </Drawer.Screen> 
+                <Drawer.Screen name="Texto Sincronizado">
+                    {() => <TextoSincronizado />}
+                </Drawer.Screen> 
+                <Drawer.Screen name="Avo">
+                    {() => <Avo nome='Joao' sobrenome='Silva' />}
+                </Drawer.Screen>  
+                <Drawer.Screen name="Evento">
+                    {() => <Evento />}
+                </Drawer.Screen>   
+                <Drawer.Screen name="ValidarProps">
+                    {() => <ValidarProps ano={18}/>}
+                </Drawer.Screen>   
+                <Drawer.Screen name="Plataformas">
+                    {() => <Plataformas/>}
+                </Drawer.Screen>   
                 <Drawer.Screen name="O Contador">
                     {() => <Contador numeroInicial={100}/>}
                 </Drawer.Screen>   
                 <Drawer.Screen name="Mega Sena">
-                    {
-                        () => <MegaSena numeros={8} />
-                    }
+                    {() => <MegaSena numeros={8} />}
                 </Drawer.Screen>
                 <Drawer.Screen name="Inverter" >
-                    {
-                        () => <Inverter texto="teste"/>
-                    }
+                    {() => <Inverter texto="teste"/>}
                 </Drawer.Screen>
                 <Drawer.Screen name="Par & Impar" >
                     {

@@ -16,5 +16,5 @@ emulator -list-avds
 emulator -avd Nexus_5X_API_29_x86
 ;Iniciar o servidor (Abrir outro terminal)
 react-native run-android
-;O comando acima tb pode ser substituido por: "npm android" caso esse script exista no package.json
+;O comando acima tb pode ser substituido por: "npm run android" caso esse script exista no package.json
 

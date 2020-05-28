@@ -7,10 +7,17 @@ export default class Contador extends Component {
         numero: this.props.numeroInicial
     }
 
-    maisUm = () => {
+    /**CAso aqui nao seja uma funcao arrow, a chamada desse
+     * metodo deve ser com uma funcao arrow
+     */
+    maisUm() {
         this.setState({ numero: this.state.numero + 1 });
     }
 
+    /** Nesse caso precisa ser uma arrow function pq senao
+     * O "this" tera o valor de quem chamou e nao da instancia
+     * dessa classe
+     */
     limpar = () => {
         this.setState({ numero: this.props.numeroInicial });
     }
@@ -25,7 +32,13 @@ export default class Contador extends Component {
             <View>
                 <Text style={{fontSize:30}}>{this.state.numero}</Text>
                 <TouchableHighlight
-                    onPress={this.maisUm}
+                    onPress={
+                        /** aqui é usado uma funcao arrow pois o 
+                         * onpress precisa receber uma funcao e
+                         * nao o retorno da funcao chamada
+                         */
+                        () => this.maisUm()
+                    }
                     onLongPress={this.limpar}
                 >
                     <Text>Incrementar/Zerar</Text>
