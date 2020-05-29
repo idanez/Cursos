@@ -27,8 +27,25 @@ const alunos = [
 const itemEstilo = {
     paddingHorizontal: 15,
     height: 50,
-    backgroundColor: 0.5,
-    borderColor: '#222'
+    backgroundColor: '#DDD',
+    borderWidth: 0.5,
+    borderColor: '#222',
+    //Flex
+    //Alinhamento no cross-axis
+    alignItems: 'center',
+    //alignItems: 'flex-end'
+    //alignItems: 'flex-start'
+
+    //Alinhamento no main-axis (Como nao foi alterado, é a coluna)
+    //justifyContent: 'center'
+    //justifyContent: 'flex-end'
+    //justifyContent: 'space-between'
+    //justifyContent: 'space-around'
+
+    //Muda o main-axis para ser a linha
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'flex-end'
 }
 
 export const Aluno = props =>

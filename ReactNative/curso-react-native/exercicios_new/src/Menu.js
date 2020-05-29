@@ -14,6 +14,7 @@ import Evento from './componentes/Evento';
 import Avo from './componentes/ComunicacaoDireta';
 import { TextoSincronizado } from './componentes/ComunicacaoIndireta'
 import ListaFlex from './componentes/ListaFlex'
+import Flex from './componentes/Flex'
 
 const Drawer = createDrawerNavigator();
 
@@ -62,7 +63,10 @@ export default function App() {
                        <Drawer.Screen name="Notifications" component={NotificationsScreen} />
                      */
                 }
-                 <Drawer.Screen name="Lista (Flex Box)">
+                <Drawer.Screen name="Flex">
+                    {() => <Flex />}
+                </Drawer.Screen> 
+                <Drawer.Screen name="Lista (Flex Box)">
                     {() => <ListaFlex />}
                 </Drawer.Screen> 
                 <Drawer.Screen name="Texto Sincronizado">
