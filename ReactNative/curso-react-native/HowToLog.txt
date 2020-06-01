@@ -1,0 +1,5 @@
+ABrir um console na raiz do projeto
+react-native log-android
+
+colocar na aplicacao:
+console.debug("mensage")
