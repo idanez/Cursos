@@ -1,0 +1,12 @@
+# criar um projeto com o expo:
+# Instalar o expo-cli de forma global:
+npm install expo-cli — global
+# Iniciar um projeto expo;
+expo init <nome_do_projeto>
+# Nao esquecer de instalar o APP no dispositivo (Cel,tablet, etc)
+# Subir o servidor: 
+# acessar pasta raiz do repositorio:
+npm run start
+# Abrir o App e escanear o QRCode
+# Ajustar o package.json para apontar para o App.js da raiz e nao do node-modules
+# adicionar o import
