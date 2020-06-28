@@ -15,6 +15,8 @@ import Avo from './componentes/ComunicacaoDireta';
 import { TextoSincronizado } from './componentes/ComunicacaoIndireta'
 import ListaFlex from './componentes/ListaFlex'
 import Flex from './componentes/Flex'
+import ToastExample from './ToastExample';
+import ToastExampleCall from './ToastExampleCall';
 
 const Drawer = createDrawerNavigator();
 
@@ -63,6 +65,11 @@ export default function App() {
                        <Drawer.Screen name="Notifications" component={NotificationsScreen} />
                      */
                 }
+                <Drawer.Screen name="Toast">
+                    {
+                        () => <ToastExampleCall />
+                    }
+                </Drawer.Screen> 
                 <Drawer.Screen name="Flex">
                     {() => <Flex />}
                 </Drawer.Screen> 

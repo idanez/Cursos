@@ -95,6 +95,7 @@ export default class App extends Component {
 
 const styles = StyleSheet.create({
   container: {
+    //flex: 1 significa que vai crescer usando toda a area da tela
     flex: 1,
     justifyContent: 'flex-end'
   },
